@@ -470,7 +470,7 @@ body{
 
 
 
-.services, .destinations, .tours{
+.services, .destinations, .tours, .stats{
     padding: var(--sectionPadding);
     display: flex;
     background-color: #fff;
@@ -896,6 +896,70 @@ body{
     backdrop-filter: blur(24px);
 }
 
+.stat-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--space56);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.stat-card1{
+    width: 35%;
+    background-color: #171F41;
+    padding: var(--space24);
+    gap: var(--space24);
+    border-radius: var(--space16);
+    display: flex;
+}
+
+.stat-card2{
+    width: 35%;
+    background-color: #455B5C;
+    padding: var(--space24);
+    gap: var(--space24);
+    border-radius: var(--space16);
+    display: flex;
+}
+
+
+
+.stat-img{
+    width: 50%;
+    height: 11.4rem;
+    border-radius: var(--space12);
+    overflow: hidden;
+}
+
+.stat-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stat-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space8);
+    color: #FFFFFF;
+}
+
+.stat-info h2{
+    font-size: var(--space48);
+    font-weight: 600;
+    font-family: Raleway, sans-serif;
+}
+
+.stat-info p{
+    font-size: var(--font18);
+    font-weight: 400;
+    text-align: center;
+}
 
 
 }
