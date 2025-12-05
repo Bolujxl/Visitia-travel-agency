@@ -399,8 +399,8 @@ body{
 
 
 .divider{
-    width: 1px;
-    height: 100%;
+    width: 15px;
+    height: 10px;
     background-color: #352f2f;
 
 }
@@ -1070,5 +1070,210 @@ body{
     font-weight: 500;
 }
 
+.cta-section{
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space40);
+    z-index: 1;
+}
+
+.cta-bg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--space12);
+    position: relative;
+}
+
+.cta-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-bg::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 31, 65, .2);
+    mix-blend-mode: overlay;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-bg::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+    
+    background-image: linear-gradient(
+            135deg, 
+            rgba(0, 0, 0, 0.50) 0%,  
+            rgba(0, 0, 0, 0.70) 27%,  
+            rgba(0, 0, 0, 0.70) 48%,  
+            rgba(0, 0, 0, 0.70) 59%,  
+            rgba(0, 0, 0, 0.45) 100%  
+        );
+    
+    /* Ensure the overlay is on top of the image (z-index of 2 on a relative parent) */
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.cta-texts{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space24);
+    z-index: 3;
+}
+
+.cta-texts h2{
+    font-size: var(--space40);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    width: 65%;
+}
+
+.cta-but{
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    padding: var(--space16) var(--space24);
+    font-size: var(--font16);
+    border-radius: var(--space12);
+    letter-spacing: -.01em;
+    border: 1px solid #FFFFFF;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.cta-but:hover{
+    background-color: transparent !important;
+    border: 1px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+
+.footer{
+    padding: var(--space80) var(--space40) var(--space24);
+    background-color: #1B2653;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space80);
+}
+
+.top-footer{
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.tag-text{
+    display: flex;
+    font-size: var(--font24);
+    font-weight: 500;
+}
+
+.other-links{
+    display: flex;
+    gap: var(--space56);
+}
+
+.pages{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+
+.pages p{
+    font-size: var(--font14);
+    color: rgba(255, 255, 255, .7);
+}
+
+.pages-links{
+    display: flex;
+    gap: var(--space8);
+}
+
+.pages-links a{
+    text-decoration: none;
+    color: #ffFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 0 .25rem;
+}
+
+.pages-links a:hover{
+    text-decoration: none;
+    color: #ffFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: #5a5c65 0px 0px 8px;
+    
+}
+
+.bottom-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.logoF {
+    color: #ffFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space8);
+}
+
+.logo-boxF{
+    height: 4rem;
+    width: 4rem;
+}
+
+.logo-boxF img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoF p{
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-family: "adlam display", sans-serif;
+    font-weight: bold;
+    letter-spacing: -4%;
+}
+
+.foot-text{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space16);
+    color: rgba(255, 255, 255, .7);
+    font-size: var(--font14);
+    line-height: 130%;
+}
 
 }
