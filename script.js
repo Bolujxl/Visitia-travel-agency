@@ -13,6 +13,10 @@ cursorTag.style.opacity = 1;
 const customPointer = document.getElementById('custom-pointer');
 const cursorTag = document.getElementById('cursor-tag');
 
+// Check if user is already logged in
+let userName = localStorage.getItem('userName') || 'Guest';
+cursorTag.textContent = userName;
+
 // 1. Target Position: Where the actual mouse is
 let targetX = 0;
 let targetY = 0;
@@ -27,6 +31,18 @@ const easingFactor = 0.30; // 0.15 is 15% of the distance per frame (good starti
 // Offsets (same as before)
 const tagOffsetX = 8; 
 const tagOffsetY = 8;
+
+// Login functionality
+const loginButton = document.querySelector('.login-but');
+
+loginButton.addEventListener('click', () => {
+    const name = prompt('Please enter your name:');
+    if (name && name.trim() !== '') {
+        userName = name.trim();
+        localStorage.setItem('userName', userName);
+        cursorTag.textContent = userName;
+    }
+});
 
 
 function animateFollow() {
