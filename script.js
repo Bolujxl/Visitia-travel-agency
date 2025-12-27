@@ -66,3 +66,20 @@ requestAnimationFrame(animateFollow);
 
     // Start the animation loop
 animateFollow();
+
+
+const hamburger = document.getElementById('hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+const closeMenu = document.getElementById('close-menu');
+
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevents background scroll
+});
+
+closeMenu.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enables scroll
+});
+
