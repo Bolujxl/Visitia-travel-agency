@@ -8,12 +8,13 @@ A modern, responsive landing page for a travel agency. Built with a focus on cle
 What's inside?
 Modern UI: Features glassmorphism, custom-styled forms, and high-quality card layouts.
 
-Fully Responsive: I used a token-based system for spacing and typography so it looks great on everything from an iPhone to a 27-inch monitor.
+Fully Responsive: I used a token-based system for spacing and typography so it looks great on everything from an iPhone to a large desktop.
 
 Pure CSS Logic: Aside from a tiny bit of JS to toggle the mobile menu, all the layout shifts and hover effects are handled with CSS.
 
 The Tech I Used
 HTML5 & CSS3: Leveraged CSS Variables (tokens) for easy theme management.
+JS: for a custom cursor carrying a user's name when they try to login
 
 Flexbox & Grid: Used for the destination and tour sections.
 
